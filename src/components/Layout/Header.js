@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import mealsImage from '../../assets/meals.jpg'
+import { CartButton } from './CartButton'
 
 const Headersty = styled.header`
   position: fixed;
@@ -36,7 +37,8 @@ export const Header = (props) => {
     <Fragment>
         <Headersty>
             <h1>My Food Ordering App</h1>
-            <button>Cart</button>
+            {/* <button>Cart</button> */}
+            <CartButton></CartButton>
         </Headersty>
         <MainImage>
             <MainimageImg src= { mealsImage } alt='tabel full of meals'></MainimageImg>
