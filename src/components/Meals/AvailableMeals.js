@@ -7,6 +7,7 @@ import { Card } from '../UI/Card'
 export const AvailableMeals = (props) => {
     const MealItems = DUMMY_MEALS.map(ele => 
     <MealItem key= {ele.id}
+    id = {ele.id}
     name = {ele.name} 
     description= {ele.description} price= {ele.price}>
     </MealItem>

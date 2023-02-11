@@ -32,7 +32,7 @@ export const MealItem = (props) => {
         <Description>{props.description}</Description>
         <Price>{price}</Price>
         </div>
-        <MealItemForm name={props.name}></MealItemForm>
+        <MealItemForm name={props.name} id= {props.id}></MealItemForm>
     </Meal>
   )
 }

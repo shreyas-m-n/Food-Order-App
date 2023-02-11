@@ -25,7 +25,7 @@ export const MealItemForm = (props) => {
   return (
     <Form>
         <Input label= {props.name}
-        input= {{id: 'amount', type: 'number', min: '1', max: '5', step: '1',
+        input= {{id: 'amount_' + props.id, type: 'number', min: '1', max: '5', step: '1',
         defaultValue: '1'}}
         ></Input>
         <Button>+ Add</Button>
