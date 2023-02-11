@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { MealItemForm } from './MealItemForm'
 
 const Meal = styled.li`
   display: flex;
@@ -31,6 +32,7 @@ export const MealItem = (props) => {
         <Description>{props.description}</Description>
         <Price>{price}</Price>
         </div>
+        <MealItemForm name={props.name}></MealItemForm>
     </Meal>
   )
 }
