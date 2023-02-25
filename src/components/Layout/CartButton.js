@@ -37,9 +37,9 @@ const SpanBadge = styled.span`
 `
 
 
-export const CartButton = () => {
+export const CartButton = (props) => {
   return (
-    <Button>
+    <Button onClick= {props.onClick}>
         <SpanIcon><CartIcon></CartIcon></SpanIcon>
         <span>Cart</span>
         <SpanBadge>3</SpanBadge>

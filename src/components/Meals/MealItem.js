@@ -24,7 +24,7 @@ const Price = styled.div`
 
 
 export const MealItem = (props) => {
-    const price = `$${ props.price.toFixed(2) }`;
+    const price = `Rs. ${ props.price.toFixed(2) }`;
   return (
     <Meal>
         <div>

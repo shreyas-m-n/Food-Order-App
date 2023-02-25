@@ -38,10 +38,10 @@ export const Header = (props) => {
         <Headersty>
             <h1>My Food Ordering App</h1>
             {/* <button>Cart</button> */}
-            <CartButton></CartButton>
+            <CartButton onClick= {props.onShowCart}></CartButton>
         </Headersty>
         <MainImage>
-            <MainimageImg src= { mealsImage } alt='tabel full of meals'></MainimageImg>
+            <MainimageImg src= { mealsImage } alt='table full of meals'></MainimageImg>
         </MainImage>
     </Fragment>
   )
