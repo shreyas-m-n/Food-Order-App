@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import CartIcon from '../Cart/CartIcon'
+import CartContext from '../store/cart-context'
 
 const Button = styled.button`
   cursor: pointer;
@@ -38,11 +39,18 @@ const SpanBadge = styled.span`
 
 
 export const CartButton = (props) => {
+
+  const cartCtx= useContext(CartContext);
+  const numberOfItems= cartCtx.items.reduce((currNumber, item)=>{
+    return currNumber += item.amount;
+  }, 0)
+
+
   return (
     <Button onClick= {props.onClick}>
         <SpanIcon><CartIcon></CartIcon></SpanIcon>
         <span>Cart</span>
-        <SpanBadge>3</SpanBadge>
+        <SpanBadge>{numberOfItems}</SpanBadge>
     </Button>
   )
 }
