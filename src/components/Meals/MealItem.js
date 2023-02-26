@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import { MealItemForm } from './MealItemForm'
+import CartContext from '../store/cart-context'
 
 const Meal = styled.li`
   display: flex;
@@ -25,6 +26,18 @@ const Price = styled.div`
 
 export const MealItem = (props) => {
     const price = `Rs. ${ props.price.toFixed(2) }`;
+
+    const cartCtx= useContext(CartContext);
+
+    const AddToCartHandler= amount=>{
+      cartCtx.addItem({
+        id: props.id,
+        name: props.name,
+        amount: amount,
+        price: props.price
+      })
+    }
+
   return (
     <Meal>
         <div>
@@ -32,7 +45,7 @@ export const MealItem = (props) => {
         <Description>{props.description}</Description>
         <Price>{price}</Price>
         </div>
-        <MealItemForm name={props.name} id= {props.id}></MealItemForm>
+        <MealItemForm onAddToCart={AddToCartHandler} name={props.name} id= {props.id}></MealItemForm>
     </Meal>
   )
 }

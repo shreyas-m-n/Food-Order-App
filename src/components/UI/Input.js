@@ -18,11 +18,11 @@ const Inputsty= styled.input`
   padding-left: 0.5rem;
 `
 
-export const Input = (props) => {
+export const Input = React.forwardRef((props, ref) => {
   return (
     <InputDiv>
         <Label htmlFor={props.input.id}>{props.label}</Label>
-        <Inputsty {...props.input}></Inputsty>
+        <Inputsty ref={ref} {...props.input}></Inputsty>
     </InputDiv>
   )
-}
+})
