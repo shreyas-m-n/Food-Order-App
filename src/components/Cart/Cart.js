@@ -10,7 +10,7 @@ export const Cart = (props) => {
         cartCtx.removeItem(id);
     }
     const cartItemAddHandler= (item)=> {
-
+        // cartCtx.addItem(item);
     }
 
     const cartData = <ul className={classes['cart-items']}> {/* typecast it like this if u add '-' in classname */}
